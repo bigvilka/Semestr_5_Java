@@ -1,0 +1,18 @@
+
+javac -sourcepath src -d bin -classpath /home/vladis/IdeaProjects/Lab1/commons-codec-1.8.jar src/com/Matveev/hash/Main.java src/com/Matveev/hash/CountHash.java src/com/Matveev/hash/InteractiveMode.java src/com/Matveev/hash/SimpleMode.java
+
+
+java -classpath commons-codec-1.8.jar:bin com.Matveev.hash.Main -i /home/vladis/IdeaProjects/Lab1/i.webp
+
+
+jar cmf manifest.mf main.jar Main.class CountHash.class InteractiveMode.class SimpleMode.class
+
+java -jar main.jar -md5 -f /home/vladis/IdeaProjects/Lab1/i.webp
+
+
+
+vladis@vladis:~/IdeaProjects/Lab1/bin/com/Matveev/hash$ chmod ugo+x setup.sh
+vladis@vladis:~/IdeaProjects/Lab1/bin/com/Matveev/hash$ ls -l setup.sh
+-rwxrwxr-x 1 vladis vladis 454 окт  8 23:11 setup.sh
+vladis@vladis:~/IdeaProjects/Lab1/bin/com/Matveev/hash$ ./setup.sh
+
